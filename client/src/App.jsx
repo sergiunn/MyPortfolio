@@ -1,31 +1,35 @@
-import './index.css'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+import ProjectCard from "./components/ProjectCard";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 p-8">
-      <Navbar />
-      <header className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold">Your Name</h1>
-        <p className="text-lg text-gray-600 mt-2">
-          Embedded software developer transitioning into full-stack development.
-        </p>
-      </header>
+    <Router>
+      <div className="min-h-screen bg-gray-50 text-gray-900">
 
-      <main className="max-w-4xl mx-auto mt-10 space-y-8">
-        <section>
-          <h2 className="text-2xl font-semibold">Home</h2>
-        </section>
+        <Navbar />
 
-        <section>
-          <h2 className="text-2xl font-semibold">Projects</h2>
-        </section>
+        <main className="max-w-4xl mx-auto p-8">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+      </div>
 
-        <section>
-          <h2 className="text-2xl font-semibold">Contact</h2>
-        </section>
-      </main>
-    </div>
+      <ProjectCard
+         title="My First Project"
+         description="This is a practice project to learn React."
+         link="https://github.com/yourRepo"
+         imageUrl="https://via.placeholder.com/300"
+      />
+
+
+    </Router>
   );
 }
 
