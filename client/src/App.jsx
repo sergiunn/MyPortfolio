@@ -25,7 +25,7 @@ function App() {
          title="My First Project"
          description="This is a practice project to learn React."
          link="https://github.com/yourRepo"
-         imageUrl="https://via.placeholder.com/300"
+         imageUrl="https://picsum.photos/400/300"
       />
 
 

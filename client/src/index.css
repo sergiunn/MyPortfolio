@@ -1,1 +1,103 @@
 @import "tailwindcss";
+
+@layer components {
+  .project-card {
+    @apply bg-white shadow-md rounded-xl overflow-hidden transition transform hover:scale-105 hover:shadow-xl;
+  }
+
+  .project-card-image {
+    @apply w-full h-48 object-cover;
+  }
+
+  .project-card-content {
+    @apply p-4 space-y-2;
+  }
+
+  .project-card-title {
+    @apply text-xl font-bold;
+  }
+
+  .project-card-description {
+    @apply text-gray-600 text-sm;
+  }
+
+  .project-card-link {
+    @apply text-blue-600 underline text-sm hover:text-blue-800;
+  }
+
+  /* === HOME PAGE === */
+
+.home-section {
+  @apply py-20;
+}
+
+.home-container {
+  @apply max-w-4xl mx-auto px-4;
+}
+
+.home-title {
+  @apply text-5xl font-bold text-gray-900;
+}
+
+.home-title-highlight {
+  @apply text-blue-600;
+}
+
+.home-subtitle {
+  @apply text-2xl text-gray-700 mt-4;
+}
+
+.home-description {
+  @apply text-gray-600 mt-6 leading-relaxed max-w-2xl;
+}
+
+.home-description-strong {
+  @apply font-semibold;
+}
+
+.home-buttons {
+  @apply flex space-x-4 mt-8;
+}
+
+.home-btn-primary {
+  @apply px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition;
+}
+
+.home-btn-secondary {
+  @apply px-6 py-3 border border-gray-400 text-gray-700 font-medium rounded-md hover:bg-gray-100 transition;
+}
+
+/* === SKILLS === */
+
+.skills-section {
+  @apply py-16 bg-white;
+}
+
+.skills-container {
+  @apply max-w-4xl mx-auto px-4;
+}
+
+.skills-title {
+  @apply text-6xl font-semibold mb-6;
+}
+
+.skills-grid {
+  @apply grid grid-cols-2 sm:grid-cols-3 gap-4 text-gray-700;
+}
+
+.skill-item {
+  @apply p-4 bg-gray-100 rounded-md text-center font-medium;
+}
+
+/* ----------- CONTACT PAGE UTILITIES ----------- */
+
+.contact-title {
+  @apply text-3xl font-bold;
+}
+
+.contact-description {
+  @apply mt-4 text-gray-600;
+}
+
+
+}
